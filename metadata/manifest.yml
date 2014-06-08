@@ -1,0 +1,25 @@
+Name: Faye
+Cartridge-Short-Name: FAYE
+Cartridge-Version: '0.0.1'
+Compatible-Versions:
+  - '0.0.1'
+Cartridge-Vendor: cameron-martin
+Version: '1.0.1'
+Versions: ['1.0.1']
+Categories:
+  - service
+  - faye
+Scaling:
+  Min: 1
+  Max: 1
+Provides:
+  - faye
+Endpoints:
+  - Private-IP-Name: HOST
+    Private-Port-Name: PORT
+    Public-Port-Name: PUBLIC_PORT
+    Private-Port: 9292
+    Mappings:
+      - Frontend:      '/faye'
+        Backend:       '/'
+        Options:       { "websocket": true }
